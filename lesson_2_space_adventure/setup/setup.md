@@ -5,7 +5,7 @@
 - Link your CSS file to your HTML
 - Add [space.png](end-result/space.png) as the background of the `body`
 - Add a planet at the bottom
-- Create an `img` for [spaceship.png]((end-result/spaceship.png))
+- Create an `img` for [spaceship.png](end-result/spaceship.png)
 
 #### End result
 - [End result folder](end-result)
