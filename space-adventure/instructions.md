@@ -14,7 +14,7 @@
 #### Lessons
 
 1. [Setup](setup/setup.md)
-1. Lesson 1
+1. [Lesson 1](lesson-1/instructions.md)
 1. Lesson 2
 1. Lesson 3
 1. Lesson 4
