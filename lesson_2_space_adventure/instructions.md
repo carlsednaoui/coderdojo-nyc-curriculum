@@ -13,7 +13,7 @@
 
 #### Lessons
 
-1. [Setup](setup)
+1. [Setup](setup/setup.md)
 1. Lesson 1
 1. Lesson 2
 1. Lesson 3
