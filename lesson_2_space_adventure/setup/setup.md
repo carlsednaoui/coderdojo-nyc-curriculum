@@ -7,7 +7,9 @@
 - Add a planet at the bottom
 - Create an `img` for `spaceship.png`
 
-#### [End result](end-result)
+#### End result
+- [End result folder](end-result)
+- [End result zip](end-result.zip)
 
 #### Example
 ![](http://i.imgur.com/vFBsejE.png)
