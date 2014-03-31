@@ -14,6 +14,7 @@ body {
 #ship {
 	display: block;
 	position: absolute;
-	left: 45%; // Rough number so it looks centred
-	bottom: 4px; // This needs to be 46 pixels smaller than the land height
+	left: 45%; /* Rough number so it looks centred */
+	bottom: 4px; /* This needs to be 46 pixels smaller than the land height */
+  z-index: 10;
 }
