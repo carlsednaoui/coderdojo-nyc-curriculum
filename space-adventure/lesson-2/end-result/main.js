@@ -7,12 +7,17 @@ var ship_velocity = 0;
 var GRAVITY = 1;
 var THRUST = 10;
 
+// Here we create a function that gets called every 50 millisecond, and is
+// responsible for updating our game.
 var step = function () {
 	// First, we're going to update the altitude using our velocity
 	ship_altitude = ship_altitude + ship_velocity;
 	ship_velocity = ship_velocity - GRAVITY;
 
+	// Adjust the ship's position on the screen to its new altitude
 	$('#ship').css('margin-bottom', ship_altitude)
+
+	// And make sure we re-call step() again in 50 milliseconds
 	window.setTimeout(step, 50);
 }
 
