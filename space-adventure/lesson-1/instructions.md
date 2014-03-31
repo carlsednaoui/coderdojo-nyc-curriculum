@@ -43,14 +43,14 @@ $('body').on('keydown', function() {
 ```
 
 
-## Part 4: More variables
+## Part 5: More variables
 
 In the dev tools 
-- `var ship_altitude = 100;`
-- `$('#ship').css('margin-bottom', ship_altitude);`
+- `var shipAltitude = 100;`
+- `$('#ship').css('margin-bottom', shipAltitude);`
 
 
-## Part 5: Basic interactions
+## Part 6: Basic interactions
 
 Let's add some interaction in our JS file.
 
@@ -58,32 +58,32 @@ Let's add some interaction in our JS file.
 $('body').on('keydown', function() {
 
   // Then adjust the ship's altitude
-  ship_altitude = ship_altitude + 10;
+  shipAltitude = shipAltitude + 10;
 
   // First we're going to change the image for the sprite
   // Now we'll move the ship on the screen
   $('#ship')
     .attr('src', 'spaceship-moving.png')
-    .css('margin-bottom', ship_altitude);
+    .css('margin-bottom', shipAltitude);
 
 };
 ```
 
-## Part 6: Reverting the ship back to it's original image
+## Part 7: Reverting the ship back to it's original image
 
 ```js
-var ship_altitude = 0;
+var shipAltitude = 0;
 
 $('body').on('keydown', function() {
 
   // Then adjust the ship's altitude
-  ship_altitude = ship_altitude + 10;
+  shipAltitude = shipAltitude + 10;
 
   // First we're going to change the image for the sprite
   // Now we'll move the ship on the screen
   $('#ship')
     .attr('src', 'spaceship-moving.png')
-    .css('margin-bottom', ship_altitude);
+    .css('margin-bottom', shipAltitude);
 
   // But since we aren't continuously firing the engines, let's
   // reset the image after 500 milliseconds
