@@ -22,7 +22,7 @@ Position the ship in the bottom center of the screen, touching the ground.
 
 ## Part 3: Intro to the dev tools and variables
 
-In the dev tools    
+Play around in the dev tools
 - `console.log('hello world')`
 - `var x = 10`
 - `x + 100`
@@ -34,7 +34,7 @@ Change the ship's image whenever a key is pressed.
 
 In the dev tools run `$('#ship').attr('src', 'spaceship-moving.png')`
 
-Let's add some keybinding
+Let's now go to our JS file and add some keybinding!
 
 ```js
 $('body').on('keydown', function() {
@@ -44,6 +44,6 @@ $('body').on('keydown', function() {
 
 
 ## Part 4: More variables
-In the dev tools    
+In the dev tools 
 - `var ship_altitude = 100;`
 - `$('#ship').css('margin-bottom', ship_altitude);`
