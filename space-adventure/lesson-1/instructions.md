@@ -20,7 +20,7 @@ Position the ship in the bottom center of the screen, touching the ground.
 - Create `main.js` and add it to `index.html`
 
 
-### Part 3: Intro to the dev tools and variables
+## Part 3: Intro to the dev tools and variables
 
 In the dev tools    
 - `console.log('hello world')`
