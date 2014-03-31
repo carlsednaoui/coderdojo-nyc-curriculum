@@ -18,3 +18,12 @@ body {
 	bottom: 4px; /* This needs to be 46 pixels smaller than the land height */
   z-index: 10;
 }
+
+.dashboard {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: white;
+}
