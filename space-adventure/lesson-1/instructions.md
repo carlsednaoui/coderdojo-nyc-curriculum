@@ -32,7 +32,7 @@ Play around in the dev tools
 
 Change the ship's image whenever a key is pressed.
 
-In the dev tools run `$('#ship').attr('src', 'spaceship-moving.png')`
+In the dev tools run `$('#ship').attr('src', 'spaceship-moving.png')`.
 
 Let's now go to our JS file and add some keybinding!
 
@@ -44,6 +44,27 @@ $('body').on('keydown', function() {
 
 
 ## Part 4: More variables
+
 In the dev tools 
 - `var ship_altitude = 100;`
 - `$('#ship').css('margin-bottom', ship_altitude);`
+
+
+## Part 5: Basic interactions
+
+Let's add some interaction in our JS file.
+
+```js
+$('body').on('keydown', function() {
+
+  // Then adjust the ship's altitude
+  ship_altitude = ship_altitude + 10;
+
+  // First we're going to change the image for the sprite
+  // Now we'll move the ship on the screen
+  $('#ship')
+    .attr('src', 'spaceship-moving.png')
+    .css('margin-bottom', ship_altitude);
+
+};
+```
