@@ -79,46 +79,40 @@ Now change the `shipAltitude` variable to `400`
 And update the ship's altitude once again    
 `$('#ship').css('margin-bottom', shipAltitude);`
 
-Notice how the ship moved up!
+Notice how the ship moves up!
 
 
 ## Part 6: Basic interactions
-
-Let's add some interaction in our JS file.
-
-```js
-$('body').on('keydown', function() {
-
-  // Then adjust the ship's altitude
-  shipAltitude = shipAltitude + 10;
-
-  // First we're going to change the image for the sprite
-  // Now we'll move the ship on the screen
-  $('#ship')
-    .attr('src', 'spaceship-moving.png')
-    .css('margin-bottom', shipAltitude);
-
-};
-```
-
-## Part 7: Reverting the ship back to it's original image
+Let's add some interaction to our JavaScript file. We will use variables (introduced earlier) and some jQuery magic (also introduced earlier).
 
 ```js
+// Define the ship's altitude
 var shipAltitude = 0;
 
 $('body').on('keydown', function() {
-
   // Then adjust the ship's altitude
+  // Notice how we're using variables like we did in the console
   shipAltitude = shipAltitude + 10;
 
   // First we're going to change the image for the sprite
-  // Now we'll move the ship on the screen
+  // Then we'll move the ship on the screen
   $('#ship')
     .attr('src', 'spaceship-moving.png')
     .css('margin-bottom', shipAltitude);
+};
+```
 
-  // But since we aren't continuously firing the engines, let's
-  // reset the image after 500 milliseconds
+Save your code, refresh your browser. The first time you press a key your ship should move up by 10px and the ship's jet engines should fire.
+
+## Part 7: Reverting the ship back to it's original image
+We've made __a lot__ of progress thus far and are almost ready to explore space! One last thing remains, we need to revert to the original image when the ship stops using it's powerful jet engines.
+
+To do this we'll use setTimeout (this logic will come in handy in later lessons).
+
+> If you have time, explain what is happeneing here and tell them more about functions and how they work. If you don't have time, no worries, we'll dive into functions in the next lesson :)
+
+```js
+  // Let's reset the image after 500 milliseconds
   window.setTimeout(
     function() {
       $('#ship').attr('src', 'spaceship.png');
@@ -126,3 +120,35 @@ $('body').on('keydown', function() {
     500);
 });
 ```
+
+Here is what the `main.js` looks like
+
+```js
+var shipAltitude = 0;
+
+$('body').on('keydown',
+  function () {
+
+    // Then adjust the ship's altitude
+    shipAltitude = shipAltitude + 10;
+
+    // First we're going to change the image for the sprite
+    // Now we'll move the ship on the screen
+    $('#ship')
+      .attr('src', 'spaceship-moving.png')
+      .css('margin-bottom', shipAltitude)
+
+    // But since we aren't continuously firing the engines, let's
+    // reset the image after 500 milliseconds
+    window.setTimeout(
+      function() {
+        $('#ship').attr('src', 'spaceship.png');
+      }, 
+      500);
+  });
+```
+
+#### End result
+- [End result folder](end-result)
+- [End result zip](end-result.zip)
+    - Click "view raw" to download the files
