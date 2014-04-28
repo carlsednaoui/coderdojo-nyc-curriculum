@@ -1,4 +1,11 @@
 # Space Adventures
+In this course we'll create a game allowing participants to safely land a rocket ship on a planet. This course is perfect to review HTML & CSS concepts and explore JavaScript.
+
+By the end of the course participants will understand:
+- JS Variables
+- Basic jQuery
+- How functions work
+
 
 #### Pre-requisites
   
@@ -9,12 +16,11 @@
   - You'll need a basic understanding of
     - HTML
     - CSS
-    - Using an external stylesheet
+    - Using an external stylesheets
 
 #### Lessons
 
-1. [Setup](setup/setup.md)
 1. [Lesson 1](lesson-1/instructions.md)
-1. Lesson 2
-1. Lesson 3
-1. Lesson 4
+1. [Lesson 2](lesson-2/instructions.md)
+1. [Lesson 3](lesson-3/instructions.md)
+1. [Lesson 4](lesson-4/instructions.md)
