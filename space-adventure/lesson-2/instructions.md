@@ -1,9 +1,13 @@
 # Lesson 2: Getting ready for takeoff
 
-## Part 1: Position the ship
+### End goal - The ship moves on keydown
+![](http://i.imgur.com/ns7EDTU.png)
 
+
+## Part 1: Positioning the ship
 Position the ship in the bottom center of the screen, touching the ground.
 
+In `main.css`    
 ```css
 #ship {
   display: block; /* images are inline by default, we need display block to use position absolute */
@@ -16,25 +20,40 @@ Position the ship in the bottom center of the screen, touching the ground.
 
 ## Part 2: Add the basic JS files
 
-- Add [jQuery](https://developers.google.com/speed/libraries/devguide#jquery) to `index.html`
-- Create `main.js` and add it to `index.html`
+#### jQuery
+Add [jQuery](https://developers.google.com/speed/libraries/devguide#jquery) to `index.html`    
+`<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>`
+
+#### Main JS file
+Create `main.js` and add it to `index.html`    
+`<script src="main.js"></script>`
 
 
-## Part 3: Intro to the dev tools and variables
+## Part 3: Intro to the Dev Tools
+Before going any further, we'll take a few minutes to introduce the kids to the Chrome Dev Tools. We will now introduce them to basic operations and variables.
 
-Play around in the dev tools
+Have the kids do the following (feel free to share additional examples)
 - `console.log('hello world')`
 - `var x = 10`
 - `x + 100`
 
 
 ## Part 4: Changing an image
+The goal is to make our ship fly into space. To achieve this, we'll have to change our ship's image whenever it is actively using it's jet engines.
 
-Change the ship's image whenever a key is pressed. The file is available [here](end-result/spaceship-moving.png).
+Here's what our ship looks like when the jet engines are __off__ ([file](end-result/spaceship.png))    
+![](http://i.imgur.com/D94m0vr.png)
 
-In the dev tools run `$('#ship').attr('src', 'spaceship-moving.png')`.
+And here's what it looks like when they are __on__ ([file](end-result/spaceship-moving.png))    
+![](http://i.imgur.com/1HKzIzS.png)
 
-Let's now go to our JS file and add some keybinding!
+Save `spaceship-moving.png` in your project's folder. Now, in the dev tools, run `$('#ship').attr('src', 'spaceship-moving.png')`. Your ship should now have it's jet engines on.
+
+
+## Part 5: Intro to keybinding
+Let's now go to our JS file and add some keybinding (we'll use jQuery, yay!).
+
+Add the following to `main.js`    
 
 ```js
 $('body').on('keydown', function() {
@@ -42,12 +61,25 @@ $('body').on('keydown', function() {
 });
 ```
 
+Refresh your project's page (in the browser). You should see the _non-moving_ ship image (spaceship.png). Press any key and you should now see the _moving_ ship image (spaceship-moving.png).
 
-## Part 5: More variables
+## Part 5: More JS variables
+Let's jump back to the dev tools and play with some variables and jQuery functions.
 
-In the dev tools 
-- `var shipAltitude = 100;`
-- `$('#ship').css('margin-bottom', shipAltitude);`
+Create a variable called `shipAltitude`    
+`var shipAltitude = 200;`
+
+Use this variable to set the altitude of our ship    
+`$('#ship').css('margin-bottom', shipAltitude);`
+
+
+Now change the `shipAltitude` variable to `400`    
+`var shipAltitude = 400;`
+
+And update the ship's altitude once again    
+`$('#ship').css('margin-bottom', shipAltitude);`
+
+Notice how the ship moved up!
 
 
 ## Part 6: Basic interactions
