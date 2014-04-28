@@ -30,7 +30,7 @@ Play around in the dev tools
 
 ## Part 4: Changing an image
 
-Change the ship's image whenever a key is pressed.
+Change the ship's image whenever a key is pressed. The file is available [here](end-result/spaceship-moving.png).
 
 In the dev tools run `$('#ship').attr('src', 'spaceship-moving.png')`.
 
