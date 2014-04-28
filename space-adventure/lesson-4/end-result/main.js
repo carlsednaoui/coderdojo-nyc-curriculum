@@ -8,6 +8,15 @@ var shipVelocity = 0;
 // a fairly typical progrmaming convention.
 var GRAVITY = 1;
 var THRUST = 10;
+var CRASH_VELOCITY = 10;
+
+var updateDisplay = function() {
+	$('#altitude').html('altitude: ' + shipAltitude);
+	$('#velocity').html('velocity: ' + shipVelocity);
+
+	// Adjust the ship's position on the screen to its new altitude
+	$('#ship').css('margin-bottom', shipAltitude)
+}
 
 // Here we create a function that gets called every 50 millisecond, and is
 // responsible for updating our simulation.
@@ -16,11 +25,21 @@ var step = function () {
 	shipAltitude = shipAltitude + shipVelocity;
 	shipVelocity = shipVelocity - GRAVITY;
 
-	// Adjust the ship's position on the screen to its new altitude
-	$('#ship').css('margin-bottom', shipAltitude)
+	if (shipAltitude <= 0) {
+		shipAltitude = 0;
+		updateDisplay();
 
-	// And make sure we re-call step() again in 50 milliseconds
-	window.setTimeout(step, 50);
+		if (Math.abs(shipVelocity) < CRASH_VELOCITY) {
+			alert('Congratulations on a smooth landing!');
+		} else {
+			alert('Crash!');
+		}
+	} else {
+		// And make sure we re-call step() again in 50 milliseconds
+		window.setTimeout(step, 50);
+	}
+
+	updateDisplay();
 }
 
 step();

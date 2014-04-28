@@ -1,4 +1,4 @@
-# Lesson 3: Getting ready for takeoff
+# Lesson 4: Getting ready for takeoff
 
 ## Part 1
 Position the ship in the bottom center of the screen, touching the ground.

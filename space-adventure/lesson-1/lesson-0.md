@@ -1,4 +1,4 @@
-# Lesson 0: Project Setup
+# Lesson 1: Project Setup
 
 ### End goal
 ![](http://i.imgur.com/vFBsejE.png)
