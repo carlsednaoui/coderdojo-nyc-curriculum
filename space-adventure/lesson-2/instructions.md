@@ -86,11 +86,11 @@ Notice how the ship moves up!
 Let's add some interaction to our JavaScript file. We will use variables (introduced earlier) and some jQuery magic (also introduced earlier).
 
 ```js
-// Define the ship's altitude
+// Define the ship's initial altitude
 var shipAltitude = 0;
 
 $('body').on('keydown', function() {
-  // Then adjust the ship's altitude
+  // Adjust the ship's altitude
   // Notice how we're using variables like we did in the console
   shipAltitude = shipAltitude + 10;
 
@@ -124,12 +124,13 @@ To do this we'll use setTimeout (this logic will come in handy in later lessons)
 Here is what the `main.js` looks like
 
 ```js
+// Define the ship's initial altitude
 var shipAltitude = 0;
 
 $('body').on('keydown',
   function () {
 
-    // Then adjust the ship's altitude
+    // Adjust the ship's altitude
     shipAltitude = shipAltitude + 10;
 
     // First we're going to change the image for the sprite
@@ -139,12 +140,12 @@ $('body').on('keydown',
       .css('margin-bottom', shipAltitude)
 
     // But since we aren't continuously firing the engines, let's
-    // reset the image after 500 milliseconds
+    // reset the image after 250 milliseconds
     window.setTimeout(
       function() {
         $('#ship').attr('src', 'spaceship.png');
       }, 
-      500);
+      250);
   });
 ```
 

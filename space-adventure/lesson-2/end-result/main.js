@@ -8,15 +8,14 @@ $('body').on('keydown',
 
 		// First we're going to change the image for the sprite
 		// Now we'll move the ship on the screen
-		$('#ship')
-			.attr('src', 'spaceship-moving.png')
-			.css('margin-bottom', shipAltitude)
+		$('#ship').attr('src', 'spaceship-moving.png');
+		$('#ship').css('margin-bottom', shipAltitude);
 
 		// But since we aren't continuously firing the engines, let's
-		// reset the image after 500 milliseconds
+		// reset the image after 250 milliseconds
 		window.setTimeout(
 			function() {
 				$('#ship').attr('src', 'spaceship.png');
-			}, 
-			500);
+			},
+			250);
 	});
