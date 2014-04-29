@@ -1,17 +1,11 @@
 # Lesson 3: Getting ready for takeoff
 
-## Part 1
-Position the ship in the bottom center of the screen, touching the ground.
+### End goal
+Add the planet's gravity and the ship's thrust. We'll also learn how to keep track of the ship's velocity.
 
-```css
-#ship {
-  display: block;
-  position: absolute;
-  left: 45%; // Rough number so it looks centred
-  bottom: 4px; // This needs to be 46 pixels smaller than the land height
-}
-```
+![](http://i.imgur.com/iw6q6ma.gif)
 
-## Part 2
-- Add [jQuery](https://developers.google.com/speed/libraries/devguide#jquery) to `index.html`
-- Create `main.js` and add it to `index.html`
+
+## Part 1 - Let it fall
+Let's start this lesson by allowing our ship to 
+
