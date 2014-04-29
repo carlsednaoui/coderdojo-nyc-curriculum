@@ -70,7 +70,8 @@ $('body').on('keydown',
         $('#ship').attr('src', 'spaceship.png');
       },
       250);
-  });
+  }
+);
 ```
 
 You can see the [final main.js here](end-result/main.js)

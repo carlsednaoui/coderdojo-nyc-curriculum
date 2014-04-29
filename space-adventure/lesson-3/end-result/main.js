@@ -44,5 +44,6 @@ $('body').on('keydown',
       function() {
         $('#ship').attr('src', 'spaceship.png');
       },
-      250);
-  });
+    250);
+  }
+);

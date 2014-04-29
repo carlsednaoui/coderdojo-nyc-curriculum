@@ -111,13 +111,12 @@ To do this we'll use setTimeout (this logic will come in handy in later lessons)
 > If you have time, explain what is happeneing here and tell them more about functions and how they work. If you don't have time, no worries, we'll dive into functions in the next lesson :)
 
 ```js
-  // Let's reset the image after 500 milliseconds
-  window.setTimeout(
-    function() {
-      $('#ship').attr('src', 'spaceship.png');
-    }, 
-    500);
-});
+// Let's reset the image after 250 milliseconds
+window.setTimeout(
+  function() {
+    $('#ship').attr('src', 'spaceship.png');
+  }, 
+250);
 ```
 
 You can see the [final main.js here](end-result/main.js)
