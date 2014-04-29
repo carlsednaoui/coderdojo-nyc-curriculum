@@ -24,3 +24,8 @@ By the end of the course participants will understand:
 1. [Lesson 2](lesson-2/instructions.md)
 1. [Lesson 3](lesson-3/instructions.md)
 1. [Lesson 4](lesson-4/instructions.md)
+
+#### Contributing
+On your computer, inside the `space-adventure` run `npm install`.
+
+To update all zip files simply run `gulp`.
