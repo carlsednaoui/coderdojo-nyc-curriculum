@@ -46,7 +46,7 @@ Add [spaceship.png](end-result/spaceship.png) as an `img` to `index.html`
 In `index.html`    
 `<img id="ship" src="spaceship.png">`
 
-#### End result
+## End result
 - [End result folder](end-result)
 - [End result zip](end-result.zip)
     - Click "view raw" to download the files

@@ -96,9 +96,8 @@ $('body').on('keydown', function() {
 
   // First we're going to change the image for the sprite
   // Then we'll move the ship on the screen
-  $('#ship')
-    .attr('src', 'spaceship-moving.png')
-    .css('margin-bottom', shipAltitude);
+  $('#ship').attr('src', 'spaceship-moving.png');
+  $('#ship').css('margin-bottom', shipAltitude);
 };
 ```
 
@@ -121,35 +120,10 @@ To do this we'll use setTimeout (this logic will come in handy in later lessons)
 });
 ```
 
-Here is what the `main.js` looks like
+You can see the [final main.js here](end-result/main.js)
 
-```js
-// Define the ship's initial altitude
-var shipAltitude = 0;
 
-$('body').on('keydown',
-  function () {
-
-    // Adjust the ship's altitude
-    shipAltitude = shipAltitude + 10;
-
-    // First we're going to change the image for the sprite
-    // Now we'll move the ship on the screen
-    $('#ship')
-      .attr('src', 'spaceship-moving.png')
-      .css('margin-bottom', shipAltitude)
-
-    // But since we aren't continuously firing the engines, let's
-    // reset the image after 250 milliseconds
-    window.setTimeout(
-      function() {
-        $('#ship').attr('src', 'spaceship.png');
-      }, 
-      250);
-  });
-```
-
-#### End result
+## End result
 - [End result folder](end-result)
 - [End result zip](end-result.zip)
     - Click "view raw" to download the files
