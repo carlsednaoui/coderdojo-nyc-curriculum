@@ -22,9 +22,7 @@ Last, but not least, let's add our gravity (which is a constant).
 `var GRAVITY = 1;`
 
 ## Part 2 - Let the simulation begin
-We will now create a function that will handle our simulation. To do this we'll use a recursive funtion (a function that calls itself).
-
-Walk the kids through this function.
+We will now create a function that will handle our simulation. To do this we'll use a recursive funtion. Walk the kids through this code.
 
 ```js
 // Here we create a function that gets called every 50 millisecond, and is
@@ -48,7 +46,7 @@ step();
 ```
 
 ## Part 3 - How powerful is your ship?
-One last piece remain, we need to create a constant for the ship's thrust.
+One last piece remains, we need to create a constant for the ship's thrust.
 
 `var THRUST = 10;`
 
