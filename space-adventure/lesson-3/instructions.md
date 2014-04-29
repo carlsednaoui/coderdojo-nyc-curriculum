@@ -1,28 +1,28 @@
 # Lesson 3: Getting ready for takeoff
 
 ### End goal
-Add the planet's gravity and the ship's thrust. We'll also learn how to calculate the ship's velocity.
+Add the planet's gravity and the ship's thrust logic. We will also learn how to calculate the ship's velocity.
 
 ![](http://i.imgur.com/iw6q6ma.gif)
 
 
-## Part 1 - Let it fall
-Let's start this lesson by defining some base values.
+## Note: All of the below steps take place inside `main.js`
 
-First, we'll want our ship to start about half-way through the page. Let's position our ship at an altitude of 400px.
+## Part 1 - New variables
+Let's start this lesson by defining some base values. First, we'll want our ship to start about half-way through the page. Let's position our ship at an altitude of 400px.
 
 `var shipAltitude = 400;`
 
-Let's also initialize the ship's velocity (how fast it's moving) with a value of 0.
+We will now initialize the ship's velocity with a value of 0. The velocity defines how fast the ship is moving up or down.
 
 `var shipVelocity = 0;`
 
-Last, but not least, let's add our gravity (which is a constant).
+Finally, let's add our gravity — a constant.
 
 `var GRAVITY = 1;`
 
 ## Part 2 - Let the simulation begin
-We will now create a function that will handle our simulation. To do this we'll use a recursive funtion. Walk the kids through this code.
+We will now create a function to handle our simulation by using a recursive funtion. Walk the kids through this code. If you haven't introduced them to functions yet, now's the perfect time!
 
 ```js
 // Here we create a function that gets called every 50 millisecond, and is
@@ -46,11 +46,11 @@ step();
 ```
 
 ## Part 3 - How powerful is your ship?
-One last piece remains, we need to create a constant for the ship's thrust.
+To keep track of the ship's thrust we'll use another constant.
 
 `var THRUST = 10;`
 
-This is what our `keydown` function looks like now
+This is what our `keydown` function looks like now. Notice that we're now using `shipVelocity` as opposed to `shipAltitude` which we were using in [lesson-2](../lesson-2).
 
 ```js
 $('body').on('keydown',
@@ -74,7 +74,7 @@ $('body').on('keydown',
 );
 ```
 
-You can see the [final main.js here](end-result/main.js)
+You can see the [final main.js file here](end-result/main.js).
 
 ## End result
 - [End result folder](end-result)
