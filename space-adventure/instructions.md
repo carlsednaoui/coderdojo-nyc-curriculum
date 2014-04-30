@@ -1,5 +1,6 @@
 # Space Adventures
-In this course we'll create a game allowing participants to safely land a rocket ship on a planet. This course is perfect to review HTML & CSS concepts and explore JavaScript.
+In this course we'll create a game allowing participants to safely land a rocket ship on a planet. This course is perfect to review HTML & CSS concepts and explore JavaScript. You can see the final project [here](http://carlsednaoui.github.io/coderdojo-nyc-curriculum/space-adventure).
+> Hit any key to make the ship fly. Refresh the page to start a new game.
 
 By the end of the course participants will understand:
 - JS Variables
