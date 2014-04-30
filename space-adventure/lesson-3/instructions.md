@@ -1,4 +1,4 @@
-# Lesson 3: Getting ready for takeoff
+# Lesson 3: Adding some gravity
 
 ### End goal
 Add the planet's gravity and the ship's thrust logic. We will also learn how to calculate the ship's velocity.
@@ -74,7 +74,7 @@ $('body').on('keydown',
 );
 ```
 
-You can see the [final main.js file here](end-result/main.js).
+You can see the final [main.js](end-result/main.js) file here.
 
 ## End result
 - [End result folder](end-result)

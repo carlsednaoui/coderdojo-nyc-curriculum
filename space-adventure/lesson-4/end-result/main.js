@@ -11,54 +11,58 @@ var THRUST = 10;
 var CRASH_VELOCITY = 10;
 
 var updateDisplay = function() {
-	$('#altitude').html('altitude: ' + shipAltitude);
-	$('#velocity').html('velocity: ' + shipVelocity);
+  $('#altitude').html('altitude: ' + shipAltitude);
+  $('#velocity').html('velocity: ' + shipVelocity);
 
-	// Adjust the ship's position on the screen to its new altitude
-	$('#ship').css('margin-bottom', shipAltitude)
-}
+  // Adjust the ship's position on the screen to its new altitude
+  $('#ship').css('margin-bottom', shipAltitude);
+};
 
 // Here we create a function that gets called every 50 millisecond, and is
 // responsible for updating our simulation.
 var step = function () {
-	// First, we're going to update the altitude using our velocity
-	shipAltitude = shipAltitude + shipVelocity;
-	shipVelocity = shipVelocity - GRAVITY;
+  // First, we're going to update the altitude using our velocity
+  shipAltitude = shipAltitude + shipVelocity;
 
-	if (shipAltitude <= 0) {
-		shipAltitude = 0;
-		updateDisplay();
+  // Then, we're going to update the velocity using the gravity
+  shipVelocity = shipVelocity - GRAVITY;
 
-		if (Math.abs(shipVelocity) < CRASH_VELOCITY) {
-			alert('Congratulations on a smooth landing!');
-		} else {
-			alert('Crash!');
-		}
-	} else {
-		// And make sure we re-call step() again in 50 milliseconds
-		window.setTimeout(step, 50);
-	}
+  if (shipAltitude <= 0) {
+    shipAltitude = 0;
+    updateDisplay();
 
-	updateDisplay();
-}
+    if (Math.abs(shipVelocity) < CRASH_VELOCITY) {
+      alert('Congratulations on a smooth landing!');
+    } else {
+      alert('Crash!');
+    }
+  } else {
+    // And make sure we re-call step() again in 50 milliseconds
+    window.setTimeout(step, 50);
+  }
 
+  updateDisplay();
+};
+
+// start the function
 step();
 
 $('body').on('keydown',
-	function () {
+  function () {
 
-		// We're shooting off the rocket, which is going to increase our velocity.
-		shipVelocity = shipVelocity + THRUST;
+    // We're shooting off the rocket, which is going to increase our velocity.
+    shipVelocity = shipVelocity + THRUST;
 
-		// Now, we want everyone to know we're firing the rockets, so let's update
-		// the image as before.
-		$('#ship').attr('src', 'spaceship-moving.png')
+    // Now, we want everyone to know we're firing the rockets, so let's update
+    // the image as before.
+    $('#ship').attr('src', 'spaceship-moving.png');
 
-		// But since we aren't continuously firing the engines, let's
-		// reset the image after 250 milliseconds
-		window.setTimeout(
-			function() {
-				$('#ship').attr('src', 'spaceship.png');
-			}, 
-			250);
-	});
+    // But since we aren't continuously firing the engines, let's
+    // reset the image after 250 milliseconds
+    window.setTimeout(
+      function() {
+        $('#ship').attr('src', 'spaceship.png');
+      },
+    250);
+  }
+);

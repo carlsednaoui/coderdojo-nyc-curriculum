@@ -119,7 +119,7 @@ window.setTimeout(
 250);
 ```
 
-You can see the [final main.js file here](end-result/main.js).
+You can see the final [main.js](end-result/main.js) file here.
 
 
 ## End result
