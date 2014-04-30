@@ -7,8 +7,7 @@
 ## Note: All of the below steps take place inside `main.js`
 
 ## Part 1 - How resistant is the ship, captain?
-Create a new variable to save the "crash velocity" — where crash velocity determines our maximum velocity to ensure the ship doesn't crash. This value is a constant.
-
+Create a new variable to save the "crash velocity" where crash velocity determines our maximum velocity the ship can handle before crashing (if you fall too fast, you crash). This value is a constant.    
 `var CRASH_VELOCITY = 10;`
 
 ## Part 2 - Will you crash?
@@ -29,7 +28,7 @@ if (shipAltitude <= 0) {
 }
 ```
 
-Let's break down the above function step-by-step. If you ship's altitude goes to 0 or below, you've landed.    
+Let's break down the above function step-by-step. If your ship's altitude goes to 0 or below, you've landed.    
 `if (shipAltitude <= 0) {`
 
 Once the ship has landed, we check to make sure your velocity was below the `CRASH_VELOCITY`.    
@@ -82,7 +81,7 @@ var step = function () {
 ```
 
 ## Part 3 - A sleek dashboard
-We will now add a dashboard to report our altitude and velocity.
+We will now add a dashboard to report our ship's altitude and velocity.
 
 In `index.html` add the following html. We will use jQuery to update these divs.
 
@@ -133,7 +132,7 @@ var step = function () {
 }
 ```
 
-Notice that we added `shipAltitude = 0;` before `updateDisplay();`, that's just to make sure our dashboard shows an altitude of 0 once we land (otherwise it may show an altitude of `-x` depending on the velocity).
+Notice that we added `shipAltitude = 0;` before `updateDisplay();`, that's just to make sure our dashboard shows an altitude of 0 once we land (otherwise it may show an altitude of `-x` depending on the velocity). Notice that we also changed `$('#ship').css('margin-bottom', shipAltitude);` to `updateDisplay();`
 
 Finally, add the following in `main.css` to style the dashboard.
 
